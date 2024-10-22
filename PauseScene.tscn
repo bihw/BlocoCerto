@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=3 uid="uid://bq2i6qpndkmj7"]
+
+[ext_resource type="Script" path="res://PauseScene.gd" id="1_pbdxj"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="2_kqhpj"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="3_u8gb1"]
+[ext_resource type="FontFile" uid="uid://opst1wj5lps6" path="res://fonts/minecraftia/Minecraftia-Regular.ttf" id="3_v4vkt"]
+[ext_resource type="StyleBox" uid="uid://cvr4j63xnmuv8" path="res://StyleBoxFocus.tres" id="4_30g7f"]
+[ext_resource type="FontFile" uid="uid://ck6sks8a6enr6" path="res://fonts/minecrafter/Minecrafter.Alt.ttf" id="4_wf8km"]
+
+[node name="Pause" type="Node2D"]
+script = ExtResource("1_pbdxj")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("2_kqhpj")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/ColorRect/TextureRect/ColorRect2"]
+custom_minimum_size = Vector2(711, 218)
+layout_mode = 0
+offset_left = 280.0
+offset_top = 373.0
+offset_right = 991.0
+offset_bottom = 591.0
+theme_override_constants/separation = 6
+
+[node name="Resume" type="Button" parent="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer"]
+custom_minimum_size = Vector2(711, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_v4vkt")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("4_30g7f")
+text = "Continuar"
+flat = true
+
+[node name="Restart" type="Button" parent="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer"]
+custom_minimum_size = Vector2(711, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_v4vkt")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("4_30g7f")
+text = "Recomeçar"
+flat = true
+
+[node name="Home" type="Button" parent="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer"]
+custom_minimum_size = Vector2(711, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_v4vkt")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = ExtResource("4_30g7f")
+text = "Tela inicial"
+flat = true
+
+[node name="Label" type="Label" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_top = 203.0
+offset_right = 1270.0
+offset_bottom = 319.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 23
+theme_override_fonts/font = ExtResource("4_wf8km")
+theme_override_font_sizes/font_size = 110
+text = "Pause"
+horizontal_alignment = 1
+
+[node name="Back" type="TextureButton" parent="Background"]
+offset_left = 38.0
+offset_top = 32.0
+offset_right = 94.0
+offset_bottom = 97.0
+texture_normal = ExtResource("3_u8gb1")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/VBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Background/Back" to="." method="_on_back_pressed"]

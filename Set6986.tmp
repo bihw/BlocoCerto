@@ -1,0 +1,139 @@
+[gd_scene load_steps=15 format=3 uid="uid://dy8rsi15jy7pw"]
+
+[ext_resource type="Script" path="res://SettingsScene.gd" id="1_ml13h"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="2_nwq7x"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="3_mxj4e"]
+[ext_resource type="Texture2D" uid="uid://b2taau5knr12c" path="res://images/checked.png" id="4_p0sua"]
+[ext_resource type="Texture2D" uid="uid://daj3bkg06b6xg" path="res://images/unchecked.png" id="5_6nnic"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="6_qdqum"]
+[ext_resource type="Texture2D" uid="uid://dsfv40nrx5thj" path="res://images/updown.png" id="7_f7d37"]
+
+[sub_resource type="Theme" id="Theme_ywrq5"]
+CheckButton/icons/checked = ExtResource("4_p0sua")
+CheckButton/icons/unchecked = ExtResource("5_6nnic")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65hq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n74rx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4y466"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ml88q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkxd6"]
+
+[sub_resource type="Theme" id="Theme_nkhtl"]
+default_font = ExtResource("6_qdqum")
+default_font_size = 48
+SpinBox/icons/updown = ExtResource("7_f7d37")
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_ml13h")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("2_nwq7x")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="Back" type="TextureButton" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 87.0
+texture_normal = ExtResource("3_mxj4e")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="Rect" type="ColorRect" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.5
+offset_top = -265.5
+offset_right = 208.5
+offset_bottom = 265.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.223529)
+
+[node name="Lives" type="Node2D" parent="Background/ColorRect/TextureRect/ColorRect2/Rect"]
+position = Vector2(-382, -102)
+
+[node name="CheckButton" type="CheckButton" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+offset_left = 404.0
+offset_top = 141.0
+offset_right = 773.0
+offset_bottom = 238.0
+theme = SubResource("Theme_ywrq5")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxEmpty_65hq2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n74rx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4y466")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ml88q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkxd6")
+text = "Vidas infinitas"
+expand_icon = true
+
+[node name="Label" type="Label" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+offset_left = 456.5
+offset_top = 243.5
+offset_right = 558.5
+offset_bottom = 302.5
+theme_override_colors/font_color = Color(0.349914, 0.346691, 0.349915, 1)
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 44
+text = "Vidas"
+
+[node name="SpinBox" type="SpinBox" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 609.0
+offset_top = 252.0
+offset_right = 806.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = SubResource("Theme_nkhtl")
+theme_override_icons/updown = ExtResource("7_f7d37")
+min_value = 1.0
+max_value = 99.0
+value = 1.0
+alignment = 1
+editable = false
+update_on_text_changed = true
+custom_arrow_step = 1.0
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives/CheckButton" to="." method="_on_check_button_toggled"]

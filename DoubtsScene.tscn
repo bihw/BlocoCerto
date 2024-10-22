@@ -1,0 +1,454 @@
+[gd_scene load_steps=31 format=3 uid="uid://b0y057s5wodxj"]
+
+[ext_resource type="Script" path="res://DoubtsScene.gd" id="1_864qv"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="1_ypj0n"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="2_vjh6m"]
+[ext_resource type="Texture2D" uid="uid://d1shyoinamgyi" path="res://images/use_tool_sprite.png" id="4_k4332"]
+[ext_resource type="Texture2D" uid="uid://dyfhhkwbbkoek" path="res://images/tool1.png" id="4_kyoik"]
+[ext_resource type="Texture2D" uid="uid://cksdul2f1ui2o" path="res://images/Blocks/Block_of_Netherite.png" id="5_4ehkh"]
+[ext_resource type="Texture2D" uid="uid://ninxf0sqym6u" path="res://images/Blocks/Stone.png" id="6_070x7"]
+[ext_resource type="Texture2D" uid="uid://cj3xvwtvaisn7" path="res://images/Blocks/Block_of_Amethyst.png" id="7_0e23c"]
+[ext_resource type="Texture2D" uid="uid://c60i70m6crgyu" path="res://images/Blocks/Block_of_Redstone.png" id="8_o85ok"]
+[ext_resource type="Texture2D" uid="uid://bm82avm1vdfru" path="res://images/Blocks/Block_of_Raw_Gold.png" id="9_o84eq"]
+[ext_resource type="Texture2D" uid="uid://bhompwliggy0e" path="res://images/Blocks/Copper_Ore.png" id="10_ds6v7"]
+[ext_resource type="Texture2D" uid="uid://bqknjolr14q11" path="res://images/Blocks/End_Stone_Bricks.png" id="11_b42mg"]
+[ext_resource type="Texture2D" uid="uid://cjtjrwkd2pf4w" path="res://images/Blocks/Quartz_Bricks_JE2.png" id="12_1iqo2"]
+[ext_resource type="Texture2D" uid="uid://b1uuao48libul" path="res://images/Blocks/Weathered_Cut_Copper.png" id="13_k45a7"]
+[ext_resource type="Texture2D" uid="uid://dcv2ana0880x4" path="res://images/tool2.png" id="14_6q3rv"]
+[ext_resource type="Texture2D" uid="uid://ksnlrfoaxlrm" path="res://images/Blocks/Birch_Log_Left.png" id="15_n1lss"]
+[ext_resource type="Texture2D" uid="uid://yngcnbjhwhi5" path="res://images/tool3.png" id="16_t6xq3"]
+[ext_resource type="Texture2D" uid="uid://3tkurjgfrrfu" path="res://images/Blocks/Bamboo_Left.png" id="17_1nvja"]
+[ext_resource type="Texture2D" uid="uid://b43k07dlg6ttg" path="res://images/Blocks/Dirt.png" id="17_h58sw"]
+[ext_resource type="Texture2D" uid="uid://c1v5kvvttum53" path="res://images/Blocks/Crimson_Planks.png" id="18_fuhiw"]
+[ext_resource type="Texture2D" uid="uid://csiocptj8fdta" path="res://images/Blocks/Some_Log_Right.png" id="19_fdj8t"]
+[ext_resource type="Texture2D" uid="uid://b66yc6vl4e55b" path="res://images/Blocks/Stripped_Mangrove_Log.png" id="20_s8evv"]
+[ext_resource type="Texture2D" uid="uid://dcelpg3fbrhqs" path="res://images/Blocks/Cherry_Log.png" id="21_a76dg"]
+[ext_resource type="Texture2D" uid="uid://qd2ajtvle026" path="res://images/Blocks/Grass.png" id="24_jfrcr"]
+[ext_resource type="Texture2D" uid="uid://jj0ik3kevat0" path="res://images/Blocks/Snow_Block.png" id="25_3n8ux"]
+[ext_resource type="Texture2D" uid="uid://cd32btcreyioq" path="res://images/Blocks/Sand.png" id="26_ubcdx"]
+[ext_resource type="Texture2D" uid="uid://xr1il1wslvs0" path="res://images/Blocks/Grass_Dirt_Block.png" id="27_b842m"]
+[ext_resource type="Texture2D" uid="uid://buwe34ds5asll" path="res://images/Blocks/Mycelium.png" id="28_3x2f3"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="29_s7h6f"]
+[ext_resource type="Theme" uid="uid://bgg2pka5pr7dh" path="res://theme.tres" id="29_ysjyx"]
+
+[node name="Doubts" type="Node2D"]
+script = ExtResource("1_864qv")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("1_ypj0n")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="Back" type="TextureButton" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 87.0
+texture_normal = ExtResource("2_vjh6m")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -4)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 113.0
+offset_top = 32.0
+offset_right = 1177.0
+offset_bottom = 701.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.270588)
+
+[node name="Button" type="Button" parent="Node2D/ColorRect"]
+layout_mode = 0
+offset_left = 411.024
+offset_top = 602.907
+offset_right = 654.024
+offset_bottom = 656.907
+size_flags_vertical = 4
+theme = ExtResource("29_ysjyx")
+text = "Mais informações"
+
+[node name="Pickaxe" type="Node2D" parent="Node2D/ColorRect"]
+position = Vector2(0, -1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/ColorRect/Pickaxe"]
+offset_left = 63.0
+offset_top = 192.0
+offset_right = 1004.0
+offset_bottom = 423.0
+color = Color(0.641934, 0.641934, 0.641934, 0.176471)
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect"]
+layout_mode = 0
+offset_left = 47.1959
+offset_top = 62.0538
+offset_right = 147.196
+offset_bottom = 200.054
+texture = ExtResource("4_k4332")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 61.0
+offset_right = 125.0
+offset_bottom = 180.0
+texture = ExtResource("4_kyoik")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Blocks" type="Node2D" parent="Node2D/ColorRect/Pickaxe/ColorRect"]
+position = Vector2(-37, 2)
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 633.0
+offset_top = -19.0
+offset_right = 755.0
+offset_bottom = 143.0
+pivot_offset = Vector2(-66, 249)
+texture = ExtResource("5_4ehkh")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 167.0
+offset_top = -11.0
+offset_right = 289.0
+offset_bottom = 151.0
+texture = ExtResource("6_070x7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 803.0
+offset_top = -15.0
+offset_right = 925.0
+offset_bottom = 147.0
+texture = ExtResource("7_0e23c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 564.0
+offset_top = 81.0
+offset_right = 686.0
+offset_bottom = 243.0
+texture = ExtResource("8_o85ok")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 716.0
+offset_top = 76.0
+offset_right = 838.0
+offset_bottom = 238.0
+texture = ExtResource("9_o84eq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 251.0
+offset_top = 78.0
+offset_right = 373.0
+offset_bottom = 240.0
+texture = ExtResource("10_ds6v7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 336.0
+offset_top = -10.0
+offset_right = 458.0
+offset_bottom = 152.0
+texture = ExtResource("11_b42mg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect9" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 420.0
+offset_top = 82.0
+offset_right = 542.0
+offset_bottom = 244.0
+texture = ExtResource("12_1iqo2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect10" type="TextureRect" parent="Node2D/ColorRect/Pickaxe/ColorRect/Blocks"]
+offset_left = 496.0
+offset_top = -15.0
+offset_right = 618.0
+offset_bottom = 147.0
+texture = ExtResource("13_k45a7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Axe" type="Node2D" parent="Node2D/ColorRect"]
+position = Vector2(0, 11)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/ColorRect/Axe"]
+offset_left = 63.3348
+offset_top = 13.0
+offset_right = 1004.33
+offset_bottom = 171.0
+color = Color(0.643137, 0.643137, 0.643137, 0.176471)
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect"]
+layout_mode = 0
+offset_left = 48.468
+offset_top = 18.2426
+offset_right = 148.468
+offset_bottom = 156.243
+texture = ExtResource("4_k4332")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 126.0
+offset_bottom = 136.0
+texture = ExtResource("14_6q3rv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Blocks" type="Node2D" parent="Node2D/ColorRect/Axe/ColorRect"]
+position = Vector2(-37, 4)
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 183.0
+offset_top = -2.0
+offset_right = 305.0
+offset_bottom = 154.0
+texture = ExtResource("15_n1lss")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 312.0
+offset_top = -2.0
+offset_right = 434.0
+offset_bottom = 154.0
+texture = ExtResource("17_1nvja")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 442.0
+offset_top = -2.0
+offset_right = 564.0
+offset_bottom = 154.0
+texture = ExtResource("18_fuhiw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 571.0
+offset_top = -2.0
+offset_right = 693.0
+offset_bottom = 154.0
+texture = ExtResource("19_fdj8t")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 702.0
+offset_top = -2.0
+offset_right = 824.0
+offset_bottom = 154.0
+texture = ExtResource("20_s8evv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D/ColorRect/Axe/ColorRect/Blocks"]
+offset_left = 832.0
+offset_top = -2.0
+offset_right = 954.0
+offset_bottom = 154.0
+texture = ExtResource("21_a76dg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Shovel" type="Node2D" parent="Node2D/ColorRect"]
+position = Vector2(0, -12)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/ColorRect/Shovel"]
+offset_left = 63.0
+offset_top = 443.0
+offset_right = 1004.0
+offset_bottom = 601.0
+color = Color(0.643137, 0.643137, 0.643137, 0.176471)
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect"]
+layout_mode = 0
+offset_left = 48.468
+offset_top = 7.10052
+offset_right = 148.468
+offset_bottom = 145.101
+texture = ExtResource("4_k4332")
+
+[node name="TextureRect" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 20.0
+offset_right = 126.0
+offset_bottom = 139.0
+texture = ExtResource("16_t6xq3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Blocks" type="Node2D" parent="Node2D/ColorRect/Shovel/ColorRect"]
+position = Vector2(-37, 4)
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 571.0
+offset_top = -2.0
+offset_right = 693.0
+offset_bottom = 154.0
+texture = ExtResource("17_h58sw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 312.0
+offset_top = -2.0
+offset_right = 434.0
+offset_bottom = 154.0
+texture = ExtResource("24_jfrcr")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 441.0
+offset_top = -2.0
+offset_right = 563.0
+offset_bottom = 154.0
+texture = ExtResource("25_3n8ux")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect7" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 704.0
+offset_top = -2.0
+offset_right = 826.0
+offset_bottom = 154.0
+texture = ExtResource("27_b842m")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect8" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 834.0
+offset_top = -2.0
+offset_right = 956.0
+offset_bottom = 154.0
+texture = ExtResource("28_3x2f3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect6" type="TextureRect" parent="Node2D/ColorRect/Shovel/ColorRect/Blocks"]
+offset_left = 183.0
+offset_top = -2.0
+offset_right = 305.0
+offset_bottom = 154.0
+texture = ExtResource("26_ubcdx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Error" type="ColorRect" parent="Node2D/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -92.5
+offset_right = 180.0
+offset_bottom = 28.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.262745, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Node2D/ColorRect/Error"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -55.5
+offset_right = 175.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Node2D/ColorRect/Error/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -43.0
+offset_right = 157.5
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("29_s7h6f")
+theme_override_font_sizes/font_size = 24
+text = "Erro"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Node2D/ColorRect/Error/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -3.0
+offset_right = 158.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("29_s7h6f")
+theme_override_font_sizes/font_size = 24
+text = "Não foi possível abrir o arquivo"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Node2D/ColorRect/Button" to="." method="_on_button_pressed"]

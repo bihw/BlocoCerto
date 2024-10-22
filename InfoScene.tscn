@@ -1,0 +1,213 @@
+[gd_scene load_steps=11 format=3 uid="uid://nqfp40qtrfc3"]
+
+[ext_resource type="Script" path="res://InfoScene.gd" id="1_lcjd3"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="2_opls8"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="3_bma64"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="4_phdsw"]
+[ext_resource type="Texture2D" uid="uid://hxwax0d0cyv" path="res://images/Escudo-Colorido-UFPEL_10042014.png" id="5_8bjq1"]
+[ext_resource type="Texture2D" uid="uid://b1q8bedjqgda2" path="res://images/computacao-1.png" id="6_wf5h2"]
+[ext_resource type="Theme" uid="uid://bgg2pka5pr7dh" path="res://theme.tres" id="7_egup2"]
+[ext_resource type="StyleBox" uid="uid://drdbrnrvhgkiu" path="res://InfoBtnN.tres" id="8_nmr1h"]
+[ext_resource type="StyleBox" uid="uid://ux0u8rl571y2" path="res://InfoBtnP.tres" id="9_ajftu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_snlia"]
+
+[node name="Info" type="Node2D"]
+script = ExtResource("1_lcjd3")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("2_opls8")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="Back" type="TextureButton" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 87.0
+texture_normal = ExtResource("3_bma64")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="ColorRect2" type="ColorRect" parent="Background"]
+offset_left = 110.0
+offset_top = 55.0
+offset_right = 1186.0
+offset_bottom = 664.0
+color = Color(0, 0, 0, 0.270588)
+
+[node name="Label" type="Label" parent="Background/ColorRect2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 7.0
+offset_right = 893.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 31
+text = "UNIVERSIDADE FEDERAL DE PELOTAS
+Centro de Desenvolvimento Tecnológico
+Ciência da Computação e Engenharia da Computação
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Background/ColorRect2"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 171.0
+offset_right = 893.0
+offset_bottom = 213.0
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 31
+text = "DESENVOLVIMENTO DE SOFTWARES"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Background/ColorRect2"]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 238.0
+offset_right = 826.0
+offset_bottom = 325.0
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 31
+text = "Profª TATIANA AIRES TAVARES    tatiana@inf.ufpel.edu.br
+Prof. ANDERSON S. RITTA       andersonritta@ifsul.edu.br
+"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Background/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 390.0
+offset_top = 369.0
+offset_right = 807.0
+offset_bottom = 591.0
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 31
+text = "Bianca Waskow
+Bruno Barcellos
+Lucas Lopes
+Luis Miguel Mattos
+Rafael Martins"
+
+[node name="Label5" type="Label" parent="Background/ColorRect2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 265.0
+offset_top = 367.0
+offset_right = 671.0
+offset_bottom = 589.0
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 31
+text = "Alunos:"
+
+[node name="Button" type="Button" parent="Background/ColorRect2"]
+visible = false
+layout_mode = 0
+offset_left = 840.0
+offset_top = 518.0
+offset_right = 1030.0
+offset_bottom = 572.0
+size_flags_vertical = 4
+theme = ExtResource("7_egup2")
+theme_override_styles/normal = ExtResource("8_nmr1h")
+theme_override_styles/hover = ExtResource("8_nmr1h")
+theme_override_styles/pressed = ExtResource("9_ajftu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_snlia")
+text = "Contato"
+
+[node name="Ufpel" type="TextureRect" parent="Background/ColorRect2"]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 23.0
+offset_right = 1010.0
+offset_bottom = 157.0
+texture = ExtResource("5_8bjq1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Comp" type="TextureRect" parent="Background/ColorRect2"]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 429.0
+offset_right = 1003.0
+offset_bottom = 583.0
+texture = ExtResource("6_wf5h2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Contacts" type="ColorRect" parent="Background/ColorRect2"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -257.5
+offset_top = -102.0
+offset_right = 257.5
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.980392, 0.490196, 0.12549, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background/ColorRect2/Contacts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.5
+offset_top = -97.5
+offset_right = 252.5
+offset_bottom = 97.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Background/ColorRect2/Contacts/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -76.0
+offset_right = 233.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_phdsw")
+theme_override_font_sizes/font_size = 25
+text = "Contatos"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Background/ColorRect2/Button" to="." method="_on_button_pressed"]

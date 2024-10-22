@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dados>
+  <jogo_1>
+    <sessao>
+      <hora_de_inicio description="Horário de início do jogo">14h:37min:14s</hora_de_inicio>
+      <data description="Data do jogo">11/10/2024</data>
+      <duracao_do_jogo description="Duração do jogo">0h 0min 0s 087ms</duracao_do_jogo>
+      <jogo_finalizado description="O jogo foi finalizado?">Não</jogo_finalizado>
+    </sessao>
+    <performance>
+      <acertos description="Total de acertos">0</acertos>
+      <erros description="Total de erros">0</erros>
+      <erros_de_bloco description="Erros (blocos)">0</erros_de_bloco>
+      <erros_de_ferramenta description="Erros (ferramentas)">0</erros_de_ferramenta>
+      <porcentagem_de_erro description="Porcentagem total de erros">Nulo</porcentagem_de_erro>
+      <erros_consecutivos_bloco description="Erros consecutivos (blocos)">0</erros_consecutivos_bloco>
+      <erros_consecutivos_ferramenta description="Erros consecutivos (ferramentas)">0</erros_consecutivos_ferramenta>
+      <insistiu_erro_bloco description="Vezes que insistiu no bloco errado">0</insistiu_erro_bloco>
+      <insistiu_erro_ferramenta description="Vezes que insistiu na ferramenta errada">0</insistiu_erro_ferramenta>
+      <acertos_consecutivos description="Acertos consecutivos">0</acertos_consecutivos>
+      <de_primeira description="Acertos de primeira">0</de_primeira>
+      <tempo_medio_acerto description="Média de tempo até acerto">Nenhum acerto</tempo_medio_acerto>
+      <cliques_aleatorios description="Número de vezes em que houve cliques excessivos em um curto intervalo de tempo (3 cliques em 0.5s)">0</cliques_aleatorios>
+    </performance>
+    <acertos_de_primeira_localizacoes>
+      <de_primeira_direita description="Acertos de primeira na direita do tabuleiro">0</de_primeira_direita>
+      <de_primeira_esquerda description="Acertos de primeira na esquerda do tabuleiro">0</de_primeira_esquerda>
+      <de_primeira_baixo description="Acertos de primeira na parte inferior do tabuleiro">0</de_primeira_baixo>
+      <de_primeira_cima description="Acertos de primeira na parte superior do tabuleiro">0</de_primeira_cima>
+      <de_primeira_Q1 description="Acertos de primeira no quadrante superior esquerdo do tabuleiro">0</de_primeira_Q1>
+      <de_primeira_Q2 description="Acertos de primeira no quadrante superior direito do tabuleiro">0</de_primeira_Q2>
+      <de_primeira_Q3 description="Acertos de primeira no quadrante inferior esquerdo do tabuleiro">0</de_primeira_Q3>
+      <de_primeira_Q4 description="Acertos de primeira no quadrante inferior direito do tabuleiro">0</de_primeira_Q4>
+    </acertos_de_primeira_localizacoes>
+    <erros_localizacoes>
+      <bloco_errado_direita description="Erros na direita">0</bloco_errado_direita>
+      <bloco_errado_esquerda description="Erros na esquerda">0</bloco_errado_esquerda>
+      <bloco_errado_baixo description="Erros na parte inferior">0</bloco_errado_baixo>
+      <bloco_errado_cima description="Erros na parte superior">0</bloco_errado_cima>
+      <bloco_errado_Q1 description="Erros no quadrante superior esquerdo">0</bloco_errado_Q1>
+      <bloco_errado_Q2 description="Erros no quadrante superior direito">0</bloco_errado_Q2>
+      <bloco_errado_Q3 description="Erros no quadrante inferior esquerdo">0</bloco_errado_Q3>
+      <bloco_errado_Q4 description="Erros no quadrante inferior direito">0</bloco_errado_Q4>
+    </erros_localizacoes>
+    <total_cliques_localizacoes>
+      <clique_esquerda description="Total de cliques no lado esquerdo do tabuleiro">0</clique_esquerda>
+      <clique_direita description="Total de cliques no lado direito do tabuleiro">0</clique_direita>
+      <clique_baixo description="Total de cliques na parte inferior do tabuleiro">0</clique_baixo>
+      <clique_cima description="Total de cliques na parte superior do tabuleiro">0</clique_cima>
+      <quadrante_superior_esquerdo description="Total de cliques no quadrante superior esquerdo do tabuleiro">0</quadrante_superior_esquerdo>
+      <quadrante_superior_direito description="Total de cliques no quadrante superior direito do tabuleiro">0</quadrante_superior_direito>
+      <quadrante_inferior_esquerdo description="Total de cliques no quadrante inferior esquerdo do tabuleiro">0</quadrante_inferior_esquerdo>
+      <quadrante_inferior_direito description="Total de cliques no quadrante inferior direito do tabuleiro">0</quadrante_inferior_direito>
+    </total_cliques_localizacoes>
+    <demora_cliques>
+      <demorou_para_começar description="Demorou para começar (vezes de 5s)">0</demorou_para_começar>
+      <demorou_para_clicar description="Demorou para clicar durante o jogo (5s)">0</demorou_para_clicar>
+    </demora_cliques>
+    <dicas_total>
+      <dica_sem_ferramenta description="Total de cliques sem ferramenta (primeira jogada)">0</dica_sem_ferramenta>
+      <dicas description="Total de dicas usadas (não conta com cliques sem ferramenta)">0</dicas>
+      <dicas_de_bloco description="Dicas para blocos usadas">0</dicas_de_bloco>
+      <dicas_de_ferramenta description="Dicas para ferramenta usadas (não conta com dicas de aviso sem ferramenta)">0</dicas_de_ferramenta>
+    </dicas_total>
+    <dicas_detalhes>
+      <dica_de_bloco_1 description="Vezes que usou a Primeira dica de bloco">0</dica_de_bloco_1>
+      <dica_de_bloco_2 description="Vezes que usou a Segunda dica de bloco">0</dica_de_bloco_2>
+      <dica_de_bloco_3 description="Vezes que usou a Terceira dica de bloco">0</dica_de_bloco_3>
+      <dica_de_bloco_4 description="Vezes que usou a Última dica de bloco">0</dica_de_bloco_4>
+      <dica_ferramenta_1 description="Vezes que usou a Primeira dica de ferramenta">0</dica_ferramenta_1>
+      <dica_ferramenta_2 description="Vezes que usou a Última dica de ferramenta">0</dica_ferramenta_2>
+      <errou_com_dica_bloco_4 description="Vezes que errou depois de ver a última dica (bloco)">0</errou_com_dica_bloco_4>
+      <errou_com_dica_ferramenta_2 description="Vezes que errou depois de ver a última dica (ferramenta)">0</errou_com_dica_ferramenta_2>
+      <demorou_com_dica_bloco_4 description="Vezes que demorou depois de ver a última dica (bloco)">0</demorou_com_dica_bloco_4>
+      <demorou_com_dica_ferramenta_2 description="Vezes que demorou depois de ver a última dica (ferramenta)">0</demorou_com_dica_ferramenta_2>
+      <tempo_jogo_dicas_erro_bloco description="Tempo de jogo que as dicas de erro foram usadas (bloco)">[]</tempo_jogo_dicas_erro_bloco>
+      <tempo_jogo_dicas_erro_fer description="Tempo de jogo que as dicas de erro foram usadas (ferramenta)">[]</tempo_jogo_dicas_erro_fer>
+      <tempo_jogo_dicas_demora_bloco description="Tempo de jogo que as dicas de demora foram usadas (bloco)">[]</tempo_jogo_dicas_demora_bloco>
+      <tempo_jogo_dicas_demora_fer description="Tempo de jogo que as dicas de demora foram usadas (ferramenta)">[]</tempo_jogo_dicas_demora_fer>
+    </dicas_detalhes>
+  </jogo_1>
+</dados>

@@ -1,0 +1,20 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b4x7sb4ekmrvs"]
+
+[ext_resource type="StyleBox" uid="uid://djwsu4gpxfmro" path="res://SettingsYN.tres" id="1_rhw0b"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="2_y51xd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rd4l"]
+bg_color = Color(0.239216, 0.239216, 0.239216, 0.521569)
+border_color = Color(0.933333, 0.443137, 0.0823529, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[resource]
+default_font = ExtResource("2_y51xd")
+default_font_size = 23
+Button/styles/focus = ExtResource("1_rhw0b")
+Button/styles/hover = ExtResource("1_rhw0b")
+Button/styles/normal = ExtResource("1_rhw0b")
+Button/styles/pressed = SubResource("StyleBoxFlat_1rd4l")

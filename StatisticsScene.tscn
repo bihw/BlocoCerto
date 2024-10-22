@@ -1,0 +1,185 @@
+[gd_scene load_steps=6 format=3 uid="uid://cr8g3aisqlut7"]
+
+[ext_resource type="Script" path="res://StatisticsScene.gd" id="1_jjfgm"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="2_ktfnj"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="3_1csuf"]
+[ext_resource type="Theme" uid="uid://bgg2pka5pr7dh" path="res://theme.tres" id="4_cbqmw"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="5_sxrhx"]
+
+[node name="Statistics" type="Node2D"]
+script = ExtResource("1_jjfgm")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("2_ktfnj")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="Back" type="TextureButton" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 87.0
+texture_normal = ExtResource("3_1csuf")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="ColorRect" type="ColorRect" parent="Background/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -514.0
+offset_top = -325.0
+offset_right = 550.0
+offset_bottom = 325.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0, 0, 0, 0.270588)
+
+[node name="More" type="Button" parent="Background/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -130.0
+offset_top = -77.0
+offset_right = 130.0
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("4_cbqmw")
+theme_override_font_sizes/font_size = 24
+text = "Ver mais"
+
+[node name="title" type="Label" parent="Background/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -501.0
+offset_top = -300.5
+offset_right = -94.0
+offset_bottom = -177.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_sxrhx")
+theme_override_font_sizes/font_size = 29
+
+[node name="Label" type="Label" parent="Background/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -501.0
+offset_top = -158.5
+offset_right = -94.0
+offset_bottom = 218.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_sxrhx")
+theme_override_font_sizes/font_size = 26
+
+[node name="Label2" type="Label" parent="Background/ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -271.5
+offset_right = 506.0
+offset_bottom = 219.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_sxrhx")
+theme_override_font_sizes/font_size = 26
+
+[node name="Success" type="ColorRect" parent="Background/ColorRect/ColorRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.5
+offset_top = -85.0
+offset_right = 255.5
+offset_bottom = 11.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.972549, 0.482353, 0.121569, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Background/ColorRect/ColorRect/Success"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -42.0
+offset_right = 250.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Background/ColorRect/ColorRect/Success/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -236.0
+offset_top = -33.5
+offset_right = 236.0
+offset_bottom = 33.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_sxrhx")
+theme_override_font_sizes/font_size = 24
+text = "Dirija-se a pasta do seu armazenamento interno:
+\"Documents/BlocoCerto\""
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Background/ColorRect/ColorRect/More" to="." method="_on_more_pressed"]

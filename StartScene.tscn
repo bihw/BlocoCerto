@@ -1,0 +1,166 @@
+[gd_scene load_steps=14 format=3 uid="uid://dopa5fhjulv7l"]
+
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="1_usjsu"]
+[ext_resource type="Script" path="res://StartScene.gd" id="1_vwc46"]
+[ext_resource type="FontFile" uid="uid://ck6sks8a6enr6" path="res://fonts/minecrafter/Minecrafter.Alt.ttf" id="2_bp2el"]
+[ext_resource type="Script" path="res://MenuButtons.gd" id="3_bm4f7"]
+[ext_resource type="FontFile" uid="uid://opst1wj5lps6" path="res://fonts/minecraftia/Minecraftia-Regular.ttf" id="4_e6edd"]
+[ext_resource type="StyleBox" uid="uid://cvr4j63xnmuv8" path="res://StyleBoxFocus.tres" id="5_7wo5j"]
+[ext_resource type="Texture2D" uid="uid://d4grc1drlsovg" path="res://images/gear.png" id="5_tnjps"]
+[ext_resource type="Texture2D" uid="uid://c83bqxvy64dp" path="res://images/doubt.png" id="6_3bpir"]
+[ext_resource type="Texture2D" uid="uid://blufhdeerasu3" path="res://images/info.png" id="6_hl5u3"]
+
+[sub_resource type="Theme" id="Theme_3fe7p"]
+default_font = ExtResource("4_e6edd")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2t3ek"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hhgw2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qm8bw"]
+
+[node name="StartScene" type="Node2D"]
+script = ExtResource("1_vwc46")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+custom_minimum_size = Vector2(1270, 710)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("1_usjsu")
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/TextureRect"]
+custom_minimum_size = Vector2(1270, 710)
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="UI" type="Node2D" parent="ColorRect/TextureRect/ColorRect2"]
+position = Vector2(-5, -5)
+
+[node name="Title" type="Label" parent="ColorRect/TextureRect/ColorRect2/UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = 197.0
+offset_right = 1280.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.94902, 0.32549, 0.0784314, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.905882)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_bp2el")
+theme_override_font_sizes/font_size = 95
+text = "Bloco Certo"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuButtons" type="Node2D" parent="ColorRect/TextureRect/ColorRect2/UI"]
+script = ExtResource("3_bm4f7")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons"]
+offset_left = 286.0
+offset_top = 366.0
+offset_right = 997.0
+offset_bottom = 584.0
+theme_override_constants/separation = 6
+
+[node name="Start" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_3fe7p")
+theme_override_colors/font_color = Color(1, 1, 1, 0.905882)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = ExtResource("5_7wo5j")
+text = "Jogar"
+flat = true
+
+[node name="Statistics" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.905882)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_e6edd")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = ExtResource("5_7wo5j")
+text = "Estatísticas"
+flat = true
+
+[node name="Quit" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.905882)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("4_e6edd")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = ExtResource("5_7wo5j")
+text = "Sair"
+flat = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1147.0
+offset_top = 24.0
+offset_right = 1266.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -2
+
+[node name="Settings" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2t3ek")
+icon = ExtResource("5_tnjps")
+flat = true
+icon_alignment = 1
+
+[node name="Doubt" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hhgw2")
+icon = ExtResource("6_3bpir")
+flat = true
+icon_alignment = 1
+
+[node name="Info" type="Button" parent="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qm8bw")
+icon = ExtResource("6_hl5u3")
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer/Start" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_start_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer/Statistics" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_statistics_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer/Quit" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_quit_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2/Settings" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_settings_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2/Doubt" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_doubt_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/ColorRect2/UI/MenuButtons/VBoxContainer2/Info" to="ColorRect/TextureRect/ColorRect2/UI/MenuButtons" method="_on_info_pressed"]

@@ -1,0 +1,573 @@
+[gd_scene load_steps=21 format=3 uid="uid://dy8rsi15jy7pw"]
+
+[ext_resource type="Script" path="res://SettingsScene.gd" id="1_ml13h"]
+[ext_resource type="Texture2D" uid="uid://dur21vfrpcw05" path="res://images/background.png" id="2_nwq7x"]
+[ext_resource type="Texture2D" uid="uid://yn8h6t0xhcnt" path="res://images/goBack.png" id="3_mxj4e"]
+[ext_resource type="Texture2D" uid="uid://b2taau5knr12c" path="res://images/checked.png" id="4_p0sua"]
+[ext_resource type="Texture2D" uid="uid://cxyap1rtwxawe" path="res://images/unchecked.png" id="5_6nnic"]
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="6_qdqum"]
+[ext_resource type="Texture2D" uid="uid://dsfv40nrx5thj" path="res://images/updown.png" id="7_f7d37"]
+[ext_resource type="Theme" uid="uid://bgg2pka5pr7dh" path="res://theme.tres" id="8_ja5ri"]
+[ext_resource type="StyleBox" uid="uid://dngeodn3bvh3j" path="res://StyleBoxN.tres" id="9_x2r81"]
+[ext_resource type="Texture2D" uid="uid://dgbp03mfk6e5d" path="res://images/recycle-bin.png" id="10_ht65m"]
+[ext_resource type="Texture2D" uid="uid://ci88nsbul72yl" path="res://images/add.png" id="11_i03cv"]
+[ext_resource type="Theme" uid="uid://b4x7sb4ekmrvs" path="res://SettingsthemeYN.tres" id="12_mjvh4"]
+
+[sub_resource type="Theme" id="Theme_ywrq5"]
+CheckButton/icons/checked = ExtResource("4_p0sua")
+CheckButton/icons/unchecked = ExtResource("5_6nnic")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_65hq2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n74rx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4y466"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ml88q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dkxd6"]
+
+[sub_resource type="Theme" id="Theme_nkhtl"]
+default_font = ExtResource("6_qdqum")
+default_font_size = 48
+SpinBox/icons/updown = ExtResource("7_f7d37")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqa2r"]
+
+[node name="Settings" type="Node2D"]
+script = ExtResource("1_ml13h")
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.929412, 0.439216, 0.0784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ColorRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 1275.0
+offset_bottom = 715.0
+texture = ExtResource("2_nwq7x")
+
+[node name="ColorRect2" type="ColorRect" parent="Background/ColorRect/TextureRect"]
+layout_mode = 0
+offset_right = 1270.0
+offset_bottom = 710.0
+color = Color(0, 0, 0, 0.537255)
+
+[node name="Back" type="TextureButton" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 87.0
+texture_normal = ExtResource("3_mxj4e")
+ignore_texture_size = true
+stretch_mode = 5
+flip_h = true
+
+[node name="Rect" type="ColorRect" parent="Background/ColorRect/TextureRect/ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -241.5
+offset_top = -251.0
+offset_right = 241.5
+offset_bottom = 251.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.243137)
+
+[node name="MusicFlag" type="CheckButton" parent="Background/ColorRect/TextureRect/ColorRect2/Rect"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 192.0
+offset_right = 426.0
+offset_bottom = 289.0
+theme = SubResource("Theme_ywrq5")
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxEmpty_65hq2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n74rx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4y466")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ml88q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkxd6")
+text = "Música"
+flat = true
+expand_icon = true
+
+[node name="Lives" type="Node2D" parent="Background/ColorRect/TextureRect/ColorRect2/Rect"]
+position = Vector2(-339.5, -94.5)
+
+[node name="CheckButton" type="CheckButton" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+offset_left = 396.0
+offset_top = 118.0
+offset_right = 765.0
+offset_bottom = 215.0
+theme = SubResource("Theme_ywrq5")
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 44
+theme_override_styles/normal = SubResource("StyleBoxEmpty_65hq2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n74rx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4y466")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ml88q")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dkxd6")
+button_pressed = true
+text = "Vidas infinitas"
+flat = true
+expand_icon = true
+
+[node name="Label" type="Label" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+offset_left = 396.5
+offset_top = 219.0
+offset_right = 498.5
+offset_bottom = 278.0
+theme_override_colors/font_color = Color(0.34363, 0.358798, 0.399198, 1)
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 44
+text = "Vidas"
+
+[node name="SpinBox" type="SpinBox" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 618.0
+offset_top = 221.0
+offset_right = 803.0
+offset_bottom = 293.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+theme = SubResource("Theme_nkhtl")
+theme_override_icons/updown = ExtResource("7_f7d37")
+min_value = 1.0
+max_value = 99.0
+value = 10.0
+alignment = 1
+editable = false
+update_on_text_changed = true
+custom_arrow_step = 1.0
+
+[node name="Data" type="Node2D" parent="Background/ColorRect/TextureRect/ColorRect2/Rect"]
+position = Vector2(-390, -86)
+
+[node name="New" type="Button" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Data"]
+offset_left = 422.5
+offset_top = 388.5
+offset_right = 836.5
+offset_bottom = 447.5
+size_flags_vertical = 4
+theme = ExtResource("8_ja5ri")
+theme_override_font_sizes/font_size = 32
+text = "Novo documento de dados"
+icon = ExtResource("11_i03cv")
+icon_alignment = 2
+
+[node name="Clear2" type="Button" parent="Background/ColorRect/TextureRect/ColorRect2/Rect/Data"]
+offset_left = 522.0
+offset_top = 481.5
+offset_right = 738.0
+offset_bottom = 540.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("8_ja5ri")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("9_x2r81")
+text = "Limpar tudo"
+icon = ExtResource("10_ht65m")
+icon_alignment = 2
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = 399.0
+offset_top = 109.0
+offset_right = 882.0
+offset_bottom = 611.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xqa2r")
+
+[node name="Clear" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -106.0
+offset_right = 160.0
+offset_bottom = 106.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.443137, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/Clear"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 42.0
+offset_right = 315.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/Clear/ColorRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 14.0
+offset_right = 310.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Você tem certeza que deseja 
+excluir TODOS os dados?"
+horizontal_alignment = 1
+
+[node name="Yes2" type="Button" parent="Panel/Clear/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = 19.5
+offset_right = -21.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_mjvh4")
+text = "Sim"
+
+[node name="No2" type="Button" parent="Panel/Clear/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = 19.5
+offset_right = 95.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_mjvh4")
+text = "Não"
+
+[node name="Label" type="Label" parent="Panel/Clear"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 314.0
+offset_bottom = 36.0
+text = "Confirme a exclusão"
+horizontal_alignment = 1
+
+[node name="NewData" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -117.0
+offset_right = 170.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.443137, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/NewData"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -191.0
+offset_right = 165.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/NewData/ColorRect"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 9.0
+offset_right = 331.0
+offset_bottom = 111.0
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Você tem certeza que deseja 
+começar um novo documento 
+de dados?"
+horizontal_alignment = 1
+
+[node name="Yes3" type="Button" parent="Panel/NewData/ColorRect"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 128.5
+offset_right = 144.0
+offset_bottom = 163.5
+theme = ExtResource("12_mjvh4")
+text = "Sim"
+
+[node name="No3" type="Button" parent="Panel/NewData/ColorRect"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 128.5
+offset_right = 259.0
+offset_bottom = 163.5
+theme = ExtResource("12_mjvh4")
+text = "Não"
+
+[node name="Label" type="Label" parent="Panel/NewData"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 335.0
+offset_bottom = 36.0
+text = "Confirme"
+horizontal_alignment = 1
+
+[node name="NewSucess" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -80.0
+offset_right = 180.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.443137, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/NewSucess"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -75.0
+offset_right = 175.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/NewSucess/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.5
+offset_top = -60.0
+offset_right = 157.5
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Sucesso! "
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/NewSucess/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = -20.0
+offset_right = 158.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "A partir de agora os dados serão 
+salvos em um novo documento"
+horizontal_alignment = 1
+
+[node name="ClearSucess" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -42.5
+offset_right = 170.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.443137, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/ClearSucess"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -37.5
+offset_right = 165.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/ClearSucess/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -16.0
+offset_right = 113.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Apagado com sucesso"
+horizontal_alignment = 1
+
+[node name="Null" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -42.5
+offset_right = 170.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.262745, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/Null"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -37.5
+offset_right = 165.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/Null/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -16.0
+offset_right = 113.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Não há o que apagar"
+horizontal_alignment = 1
+
+[node name="Error" type="ColorRect" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -42.5
+offset_right = 170.0
+offset_bottom = 42.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.933333, 0.262745, 0.0823529, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Panel/Error"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -37.5
+offset_right = 165.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Panel/Error/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.5
+offset_top = -16.0
+offset_right = 113.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_qdqum")
+theme_override_font_sizes/font_size = 24
+text = "Nenhum arquivo encontrado"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="Background/ColorRect/TextureRect/ColorRect2/Rect/MusicFlag" to="." method="_on_music_flag_toggled"]
+[connection signal="toggled" from="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="value_changed" from="Background/ColorRect/TextureRect/ColorRect2/Rect/Lives/SpinBox" to="." method="_on_spin_box_value_changed"]
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Rect/Data/New" to="." method="_on_new_pressed"]
+[connection signal="pressed" from="Background/ColorRect/TextureRect/ColorRect2/Rect/Data/Clear2" to="." method="_on_clear_2_pressed"]
+[connection signal="pressed" from="Panel/Clear/ColorRect/Yes2" to="." method="_on_yes_2_pressed"]
+[connection signal="pressed" from="Panel/Clear/ColorRect/No2" to="." method="_on_no_2_pressed"]
+[connection signal="pressed" from="Panel/NewData/ColorRect/Yes3" to="." method="_on_yes_3_pressed"]
+[connection signal="pressed" from="Panel/NewData/ColorRect/No3" to="." method="_on_no_3_pressed"]

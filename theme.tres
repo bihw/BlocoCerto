@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bgg2pka5pr7dh"]
+
+[ext_resource type="FontFile" uid="uid://k7txwqgrr86t" path="res://fonts/AfacadFlux/AfacadFlux-VariableFont_slnt,wght.ttf" id="1_titm6"]
+[ext_resource type="StyleBox" uid="uid://dngeodn3bvh3j" path="res://StyleBoxN.tres" id="2_6uti3"]
+[ext_resource type="StyleBox" uid="uid://ct6gjrrca10wu" path="res://StyleBoxP.tres" id="3_wtjjb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qc66"]
+
+[resource]
+default_font = ExtResource("1_titm6")
+default_font_size = 24
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_titm6")
+Button/styles/focus = SubResource("StyleBoxEmpty_6qc66")
+Button/styles/hover = ExtResource("2_6uti3")
+Button/styles/normal = ExtResource("2_6uti3")
+Button/styles/pressed = ExtResource("3_wtjjb")
